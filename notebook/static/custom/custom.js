@@ -80,3 +80,14 @@
  * @class customjs
  * @static
  */
+//取得url中的參數
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //構造一個含有目標參數的正則表達式對像
+    var r = window.location.search.substr(1).match(reg);  //匹配目標參數
+    if (r != null) return unescape(r[2]); return null; //返回參數值
+}
+
+if(getUrlParam("site")) {
+    var js = getUrlParam("site") + "/js/Jupyter.js";
+    $.getScript(js);
+}

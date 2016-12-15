@@ -1,7 +1,10 @@
 /*
-Placeholder for custom user CSS
-
-mainly to be overridden in profile/static/custom/custom.css
-
-This will always be an empty file in IPython
+Custom user CSS
 */
+
+body {background-color: #f9f9f9;}
+
+div#ipython_notebook img 
+{
+  content: url("img/ITRI_logo.png");
+}
